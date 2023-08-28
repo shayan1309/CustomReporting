@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#header {
+    margin-bottom: 20px;
+}
+
+#logo {
+    width: 200px; /* Increase the width to make the logo bigger */
+    height: auto;
+    margin-bottom: 10px; /* Add some spacing below the logo */
+}
+
+.form-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px; /* Reduce the margin between field names and input fields */
+    font-weight: bold; /* Add bold font for field names */
+}
+
+.form-input {
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 10px; /* Add spacing between input fields */
+}
+
+#run-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#run-button:hover {
+    background-color: #0056b3;
+}
