@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: white;
+            color: #2b4467;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the content horizontally */
+            padding: 10px 20px;
+        }
+        #logo {
+            max-width: 200px;
+            vertical-align: middle;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            flex-grow: 1; /* Occupy available space */
+            text-align: center; /* Center the heading within the header */
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        #run-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img id="logo" src="{{ url_for('static', filename='company_logo.png') }}" alt="Company Logo">
+        <h1>Report Generator</h1>
+    </div>
+    <div class="form-container">
+    <form id='register' action="finaldemo.html" method="GET" enctype="multipart/form-data">>
+        <label class="form-label" for="API-Key">Please Enter your DistillerSR API Key:</label>
+        <input class="form-input" type="text" id="api-key" name="api_key" required>
+        <label class="form-label" for="Project-Name">Enter your DistillerSR Project Name:</label>
+        <input class="form-input" type="text" id="project-name" name="project_name" required>
+        <label class="form-label" for="Savedreport-Name">Enter your DistillerSR Saved Report Name:</label>
+        <input class="form-input" type="text" id="savedreport-name" name="saved_report_name" required>
+        <label class="form-label" for="word-file">Upload your Report Template:</label>
+        <input type="file" id="word-file" name="word_file" accept=".doc, .docx" required>
+        <input id="run-button" type="submit" value="Generate">
+    </form>
+    </div>
+</body>
+</html>
